@@ -2,16 +2,19 @@
 
 
 
-const btn = document.querySelector(".change-color");
-const body = document.querySelector("body");
-const span = document.querySelector(".color")
+const changeColorBtn = document.querySelector(".change-color");
+// const body = document.querySelector("body");
+const spanColor = document.querySelector(".color")
 
-btn.addEventListener("click", handleClick);
+changeColorBtn.addEventListener("click", handleClick);
 
 
 function handleClick(click) {
-  body.style.backgroundColor =  getRandomHexColor()
-  span.textContent = getRandomHexColor();
+  const randomColor = getRandomHexColor(); 
+  document.body.style.backgroundColor = randomColor;
+  spanColor.textContent = randomColor;
+  // body.style.backgroundColor =  getRandomHexColor()
+  // spanColor.textContent = `${getRandomHexColor()}`;
 }
 
 
